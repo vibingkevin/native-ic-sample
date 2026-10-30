@@ -1,0 +1,18 @@
+--- a/lib/src/commonMain/kotlin/cases/class_type_parameter_name/Box.kt
++++ b/lib/src/commonMain/kotlin/cases/class_type_parameter_name/Box.kt
+@@ -1,4 +1,4 @@
+ package cases.class_type_parameter_name
+-class Box<out T> {
+-    fun value(): T = error("Not called")
++class Box<out R> {
++    fun value(): R = error("Not called")
+ }
+--- a/app/src/commonTest/kotlin/cases/class_type_parameter_name/Test.kt
++++ b/app/src/commonTest/kotlin/cases/class_type_parameter_name/Test.kt
+@@ -6,5 +6,5 @@
+ @Test
+ fun test() {
+     assertEquals(KVariance.OUT, declaredVariance())
+-    assertEquals("T", declaredTypeParameterName())
++    assertEquals("R", declaredTypeParameterName())
+ }

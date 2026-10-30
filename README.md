@@ -44,3 +44,4 @@ KLIB facts 反例。
 | [val-getter](cases/val-getter/change.patch) | 稳定 getter 改为连续读取返回不同类型 | 预期 ClassCastException，实际没有抛出 |
 | [annotation](cases/annotation/change.patch) | SymbolName 从 abs 改为 toupper | 预期 65，实际 97 |
 | [class-variance](cases/class-variance/change.patch) | Box<T> 改为 Box<out T> | 预期 OUT，实际 INVARIANT |
+| [class-type-parameter-name](cases/class-type-parameter-name/change.patch) | Box<out T> 改为 Box<out R> | 反射预期 R，实际 T |

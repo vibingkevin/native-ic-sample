@@ -1,0 +1,11 @@
+--- a/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/Fact.kt
++++ b/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/Fact.kt
+@@ -221,7 +221,7 @@
+                 append(irSymbol.signature?.render())
+                 // Function references copy class type parameters into their reflection metadata.
+                 c.typeParameters.forEach { parameter ->
+-                    append('|').append(parameter.name).append('|').append(parameter.variance)
++                    append('|').append(parameter.variance)
+                 }
+                 append('|').append(c.modality)
+                 append('|').append(c.visibility).append('|')
