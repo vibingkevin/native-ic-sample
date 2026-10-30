@@ -1,0 +1,18 @@
+--- a/lib/src/commonMain/kotlin/cases/val_getter/Holder.kt
++++ b/lib/src/commonMain/kotlin/cases/val_getter/Holder.kt
+@@ -2,5 +2,5 @@
+ class Holder {
+     var calls: Int = 0
+     val value: Any = "OK"
+-        get() { return field }
++        get() { return if (++calls == 1) field else 42 }
+ }
+--- a/app/src/commonTest/kotlin/cases/val_getter/Test.kt
++++ b/app/src/commonTest/kotlin/cases/val_getter/Test.kt
+@@ -4,5 +4,5 @@
+ 
+ @Test
+ fun test() {
+-    assertEquals(2, checkedLength(Holder()))
++    assertFailsWith<ClassCastException> { checkedLength(Holder()) }
+ }
