@@ -39,3 +39,4 @@ KLIB facts 反例。
 
 | 目录 | 触发变化 | 遗漏时的实测结果 |
 |---|---|---|
+| [inline-external](cases/inline-external/change.patch) | inline 调用 first 改为 second | 预期 2，实际 1 |

@@ -1,0 +1,14 @@
+--- a/app/src/commonMain/kotlin/cases/inline_external/Inline.kt
++++ b/app/src/commonMain/kotlin/cases/inline_external/Inline.kt
+@@ -1,2 +1,2 @@
+ package cases.inline_external
+-inline fun selected(): Int = ext.first()
++inline fun selected(): Int = ext.second()
+--- a/app/src/commonTest/kotlin/cases/inline_external/Test.kt
++++ b/app/src/commonTest/kotlin/cases/inline_external/Test.kt
+@@ -1,4 +1,4 @@
+ package cases.inline_external
+ 
+ import kotlin.test.*
+-@Test fun test() { assertEquals(1, result()) }
++@Test fun test() { assertEquals(2, result()) }

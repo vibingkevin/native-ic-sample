@@ -1,0 +1,15 @@
+--- a/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/Fact.kt
++++ b/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/Fact.kt
+@@ -361,11 +361,7 @@
+ }
+ 
+ // Standalone KLIB loading leaves external symbols unbound; the default dump loses their identity.
+-private val factsDumpOptions = DumpIrTreeOptions(
+-        referenceRenderingStrategy = DumpIrTreeOptions.ReferenceRenderingStrategy.Custom {
+-            (it.signature ?: it.privateSignature)?.render()
+-        },
+-)
++private val factsDumpOptions = DumpIrTreeOptions()
+ 
+ // Do not use dump(): it can turn a rendering failure into a partial dump and hide changes.
+ private fun IrElement.dumpForFacts(): String = buildString {
