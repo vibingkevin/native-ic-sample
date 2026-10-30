@@ -42,3 +42,4 @@ KLIB facts 反例。
 | [inline-external](cases/inline-external/change.patch) | inline 调用 first 改为 second | 预期 2，实际 1 |
 | [inline-default](cases/inline-default/change.patch) | inline 默认值 77 改为 88 | 预期 130，实际 119 |
 | [val-getter](cases/val-getter/change.patch) | 稳定 getter 改为连续读取返回不同类型 | 预期 ClassCastException，实际没有抛出 |
+| [annotation](cases/annotation/change.patch) | SymbolName 从 abs 改为 toupper | 预期 65，实际 97 |

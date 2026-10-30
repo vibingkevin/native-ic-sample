@@ -1,0 +1,10 @@
+--- a/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/FactsCollector.kt
++++ b/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/FactsCollector.kt
+@@ -36,7 +36,6 @@
+         })
+         // Standalone loading cannot render annotations whose constructors remain unbound.
+         // Include type and local-declaration annotations in this conservative fallback.
+-        if (hasAnnotations) return
+ 
+         irFile.acceptVoid(object : IrVisitorVoid() {
+             override fun visitElement(element: IrElement) {
