@@ -45,3 +45,4 @@ KLIB facts 反例。
 | [annotation](cases/annotation/change.patch) | SymbolName 从 abs 改为 toupper | 预期 65，实际 97 |
 | [class-variance](cases/class-variance/change.patch) | Box<T> 改为 Box<out T> | 预期 OUT，实际 INVARIANT |
 | [class-type-parameter-name](cases/class-type-parameter-name/change.patch) | Box<out T> 改为 Box<out R> | 反射预期 R，实际 T |
+| [function-type-parameter-name](cases/function-type-parameter-name/change.patch) | 函数类型参数 T 改名为 R | 反射预期 R，实际 T |

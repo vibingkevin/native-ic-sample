@@ -1,0 +1,15 @@
+--- a/lib/src/commonMain/kotlin/cases/function_type_parameter_name/Provider.kt
++++ b/lib/src/commonMain/kotlin/cases/function_type_parameter_name/Provider.kt
+@@ -1,2 +1,2 @@
+ package cases.function_type_parameter_name
+-fun <T> value(): T = error("Not called")
++fun <R> value(): R = error("Not called")
+--- a/app/src/commonTest/kotlin/cases/function_type_parameter_name/Test.kt
++++ b/app/src/commonTest/kotlin/cases/function_type_parameter_name/Test.kt
+@@ -4,5 +4,5 @@
+ 
+ @Test
+ fun test() {
+-    assertEquals("T", declaredTypeParameterName())
++    assertEquals("R", declaredTypeParameterName())
+ }

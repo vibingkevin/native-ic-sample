@@ -1,0 +1,10 @@
+--- a/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/Fact.kt
++++ b/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/Fact.kt
+@@ -124,7 +124,6 @@
+                     // Default argument stubs make reference parameters nullable only when they have a default value.
+                     d.parameters.forEach { append('|').append(it.defaultValue != null) }
+                     // Function references copy type parameter names into their return type metadata.
+-                    d.typeParameters.forEach { append('|').append(it.name.asString()) }
+                 }
+                 // A call site lowers the constructor calls of a value class (inlined) differently from the other ones.
+                 if (d is IrConstructor) append('|').append(d.constructedClass.isValue)
