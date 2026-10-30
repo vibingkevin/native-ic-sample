@@ -40,3 +40,4 @@ KLIB facts 反例。
 | 目录 | 触发变化 | 遗漏时的实测结果 |
 |---|---|---|
 | [inline-external](cases/inline-external/change.patch) | inline 调用 first 改为 second | 预期 2，实际 1 |
+| [inline-default](cases/inline-default/change.patch) | inline 默认值 77 改为 88 | 预期 130，实际 119 |

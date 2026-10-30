@@ -1,0 +1,15 @@
+--- a/lib/src/commonMain/kotlin/cases/inline_default/Provider.kt
++++ b/lib/src/commonMain/kotlin/cases/inline_default/Provider.kt
+@@ -1,2 +1,2 @@
+ package cases.inline_default
+-inline fun defaultValue(x: Int = 77): Int = 42 + x
++inline fun defaultValue(x: Int = 88): Int = 42 + x
+--- a/app/src/commonTest/kotlin/cases/inline_default/Test.kt
++++ b/app/src/commonTest/kotlin/cases/inline_default/Test.kt
+@@ -4,5 +4,5 @@
+ 
+ @Test
+ fun runTest() {
+-    assertEquals(119, computedDefaultValue())
++    assertEquals(130, computedDefaultValue())
+ }

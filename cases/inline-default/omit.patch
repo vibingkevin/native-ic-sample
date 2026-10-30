@@ -1,0 +1,10 @@
+--- a/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/Fact.kt
++++ b/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/Fact.kt
+@@ -159,7 +159,6 @@
+             val function = irSymbol.owner as IrFunction
+             val text = buildString {
+                 append(function.body!!.dumpForFacts())
+-                function.parameters.forEach { append('|').append(it.defaultValue?.dumpForFacts()) }
+             }
+             return cityHash64(text.toByteArray())
+         }
