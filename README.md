@@ -46,3 +46,4 @@ KLIB facts 反例。
 | [class-variance](cases/class-variance/change.patch) | Box<T> 改为 Box<out T> | 预期 OUT，实际 INVARIANT |
 | [class-type-parameter-name](cases/class-type-parameter-name/change.patch) | Box<out T> 改为 Box<out R> | 反射预期 R，实际 T |
 | [function-type-parameter-name](cases/function-type-parameter-name/change.patch) | 函数类型参数 T 改名为 R | 反射预期 R，实际 T |
+| [default-parameter-presence](cases/default-parameter-presence/change.patch) | 删除 String 参数默认值，保留另一个参数默认值 | 旧消费者引用 String? 版本的 $default，链接失败 |

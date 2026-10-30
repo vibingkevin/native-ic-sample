@@ -1,0 +1,10 @@
+--- a/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/Fact.kt
++++ b/kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/facts/Fact.kt
+@@ -122,7 +122,6 @@
+                 if (d is IrFunction) {
+                     append('|').append(d.returnType.renderForFacts())
+                     // Default argument stubs make reference parameters nullable only when they have a default value.
+-                    d.parameters.forEach { append('|').append(it.defaultValue != null) }
+                     // Function references copy type parameter names into their return type metadata.
+                     d.typeParameters.forEach { append('|').append(it.name.asString()) }
+                 }
