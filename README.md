@@ -3,12 +3,21 @@
 KLIB facts 反例。
 
 两个模块：`lib` 放声明，`app` 放调用方和 `kotlin.test` 断言。
-目标为 `iosSimulatorArm64`、`iosArm64`，使用社区 Kotlin 2.4.21。
+目标为 `linuxX64`、`iosSimulatorArm64`、`iosArm64`，使用社区 Kotlin 2.4.21。
 
 这些是 **KLIB facts 传播门控的回归用例**：遗漏某项 fact 才会出错，
 不是声称社区原版 2.4.21 已有这些问题。每个反例一笔提交。
 
 ## 运行
+
+Linux x64：
+
+```sh
+./gradlew :app:linuxX64Test -Pkotlin.native.home=/path/to/dist
+```
+
+应用反例 patch 后仍使用同一命令增量构建；clean 对照加上 `clean`。
+仅验证工程时可省略 `-Pkotlin.native.home`，使用插件默认发行包。
 
 在安装 Xcode 的 Apple Silicon Mac 上，指定待验证的 Kotlin/Native dist：
 
