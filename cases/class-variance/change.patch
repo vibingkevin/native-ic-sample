@@ -1,0 +1,18 @@
+--- a/lib/src/commonMain/kotlin/cases/class_variance/Box.kt
++++ b/lib/src/commonMain/kotlin/cases/class_variance/Box.kt
+@@ -1,4 +1,4 @@
+ package cases.class_variance
+-class Box<T> {
++class Box<out T> {
+     fun value(): T = error("Not called")
+ }
+--- a/app/src/commonTest/kotlin/cases/class_variance/Test.kt
++++ b/app/src/commonTest/kotlin/cases/class_variance/Test.kt
+@@ -5,6 +5,6 @@
+ 
+ @Test
+ fun test() {
+-    assertEquals(KVariance.INVARIANT, declaredVariance())
++    assertEquals(KVariance.OUT, declaredVariance())
+     assertEquals("T", declaredTypeParameterName())
+ }
