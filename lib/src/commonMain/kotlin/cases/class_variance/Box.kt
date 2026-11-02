@@ -1,4 +1,4 @@
 package cases.class_variance
-class Box<out T> {
+class Box<T> {
     fun value(): T = error("Not called")
 }
