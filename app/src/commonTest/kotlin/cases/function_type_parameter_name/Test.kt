@@ -4,5 +4,5 @@ import kotlin.test.*
 
 @Test
 fun test() {
-    assertEquals("R", declaredTypeParameterName())
+    assertEquals("T", declaredTypeParameterName())
 }
