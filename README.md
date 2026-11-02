@@ -42,3 +42,5 @@ Linux 产物为 `app/build/bin/linuxX64/debugExecutable/app.kexe`；iOS 产物�
 每笔保留并更新对应功能断言。直接按提交顺序回放，无需应用 patch。
 不设置任何内联选项，使用编译器默认行为。这些场景检查增量传播是否正确，
 不表示社区编译器一定存在对应错误。
+
+A README-only commit within the getter sequence checks that replay keeps the Native product UP-TO-DATE when build inputs do not change.
