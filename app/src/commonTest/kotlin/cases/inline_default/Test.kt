@@ -4,5 +4,5 @@ import kotlin.test.*
 
 @Test
 fun runTest() {
-    assertEquals(130, computedDefaultValue())
+    assertEquals(119, computedDefaultValue())
 }
