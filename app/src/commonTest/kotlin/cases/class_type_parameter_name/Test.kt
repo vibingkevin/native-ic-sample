@@ -6,5 +6,5 @@ import kotlin.test.*
 @Test
 fun test() {
     assertEquals(KVariance.OUT, declaredVariance())
-    assertEquals("R", declaredTypeParameterName())
+    assertEquals("T", declaredTypeParameterName())
 }
