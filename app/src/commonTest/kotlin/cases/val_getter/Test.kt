@@ -4,5 +4,5 @@ import kotlin.test.*
 
 @Test
 fun test() {
-    assertFailsWith<ClassCastException> { checkedLength(Holder()) }
+    assertEquals(2, checkedLength(Holder()))
 }
