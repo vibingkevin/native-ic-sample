@@ -1,4 +1,4 @@
 package cases.class_type_parameter_name
-class Box<out T> {
-    fun value(): T = error("Not called")
+class Box<out R> {
+    fun value(): R = error("Not called")
 }
