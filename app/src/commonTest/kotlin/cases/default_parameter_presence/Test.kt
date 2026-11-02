@@ -5,4 +5,5 @@ import kotlin.test.*
 @Test
 fun runTest() {
     assertEquals(2, bar())
+    assertEquals(4, foo("abc"))
 }
