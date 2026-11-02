@@ -5,6 +5,6 @@ import kotlin.test.*
 
 @Test
 fun test() {
-    assertEquals(KVariance.INVARIANT, declaredVariance())
+    assertEquals(KVariance.OUT, declaredVariance())
     assertEquals("T", declaredTypeParameterName())
 }
