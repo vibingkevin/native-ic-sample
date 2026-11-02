@@ -1,2 +1,2 @@
 package cases.inline_external
-inline fun selected(): Int = ext.second()
+inline fun selected(): Int = ext.first()
